@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Photography Gallery</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    /* General Styles */
+    body {
+      background-color: #e0f7fa; /* Light sky-blue */
+      color: #003344; /* Navy for text */
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #00acc1; /* Sky blue */
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5em;
+    }
+
+    h3 {
+      font-family: fantasy;
+      font-size: 1.5em;
+    }
+
+    /* Gallery Section Heading with Thin Outline */
+    .gallery-heading {
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 800px;
+      border: 1px solid #00796b; /* Thin outline with teal color */
+      border-radius: 8px; /* Slightly rounded corners */
+      background-color: #e0f2f1; /* Light teal background */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+    .gallery-heading h3 {
+      font-weight: 600;
+      margin: 5px 0;
+    }
+
+    .gallery-heading p {
+      font-weight: 300;
+      margin: 5px 0;
+      color: #555;
+    }
+
+    /* Card Gallery Styles */
+    .gallery1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* Space between cards */
+      padding: 20px;
+    }
+
+    .card {
+      width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover; /* Ensures the image fits perfectly */
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%; /* Adjust card size on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="bi bi-camera me-2"></i>Beauty Portraits by <i>Peezy</i></h1>
+  </header>
+
+  <div class="gallery-heading" style="margin-top: 50px;">
+    <h3 style="color: #00acc1;">Welcome to My Photography Gallery</h3>
+    <p style="color: #00acc1; font-family: Arial, Helvetica, sans-serif;">This is a collection of every photo I've captured, from my early days as a beginner to where I stand today as a professional. Each picture tells a story of growth, passion, and dedication to mastering beauty portrait photography. I hope you enjoy exploring the moments I’ve frozen through my lens as much as I enjoyed capturing them.
+    </p>
+  </div>
+
+  <div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">" Berry The Friendly Dog "</h5>
+    <p style="padding-top: 20px; color: whitesmoke;">Berry The Friendly Dog is a cheerful 2-year-old male Golden Retriever and my friend's beloved pet. On this sunny day, his joyful spirit shone through as he played and frolicked, inspiring me to capture his happiness in photos. His playful demeanor and affectionate nature make every moment spent with him a delight.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/BarryTheDog1.jpeg" alt="BarryTheDog 1">
+    </div>
+    <div class="card">
+      <img src="images/BarryTheDog2.jpeg" alt="BarryTheDog 2">
+    </div>
+    <div class="card">
+      <img src="images/BarryTheDog3.jpeg" alt="BarryTheDog 3">
+    </div>
+    <div class="card">
+      <img src="images/BarryTheDog4.jpeg" alt="BarryTheDog 4">
+    </div>
+  </section>
+</div>
+
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">" A Man Without Love"</h5>
+    <p style="padding-top: 20px; color: whitesmoke;">A Man Without Love captures a poignant moment during the golden hour, where I encountered a man sitting alone at Kanbae. His solitude resonated with me, prompting me to create a somber atmosphere in the photograph. Upon asking for his permission to capture this moment, he accepted, allowing me to convey the deep sadness and longing that enveloped him.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/manwithoutlove1.jpg" alt="ManWithoutlove 1">
+    </div>
+    <div class="card">
+      <img src="images/ManWithoutLove4.jpg" alt="ManWithoutlove 2">
+    </div>
+    <div class="card">
+      <img src="images/manwithoutlove3.jpg" alt="ManWithoutlove 3">
+    </div>
+    <div class="card">
+      <img src="images/manwithoutlove2.jpg" alt="ManWithoutlove 4">
+    </div>
+  </section>
+</div>
+
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">"Portrait of Serenity"</h5>
+    <p style="padding-top: 20px; color: whitesmoke;">"Portrait of Serenity" showcases a collection of beauty portraits captured indoors, highlighting the calm and tranquil essence of each subject. Taken by me as I embark on my professional photography journey, these images reflect my evolving style and artistic vision. Utilizing only one flash, I aimed to create a soft and intimate atmosphere, emphasizing the natural beauty and serenity of the moment.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/serenity1.jpeg" alt="Portrait of Serenity 1">
+    </div>
+    <div class="card">
+      <img src="images/serenity2.jpeg" alt="Portrait of Serenity 2">
+    </div>
+    <div class="card">
+      <img src="images/serenity6.jpeg" alt="Portrait of Serenity 3">
+    </div>
+    <div class="card">
+      <img src="images/serenity4.jpeg" alt="Portrait of Serenity 4">
+    </div>
+    <div class="card">
+      <img src="images/serenity7.JPG" alt="Portrait of Serenity 5">
+    </div>
+    <div class="card">
+      <img src="images/serenity3.jpeg" alt="Portrait of Serenity 6">
+    </div><div class="card">
+      <img src="images/serenity9.jpeg" alt="Portrait of Serenity 7">
+    </div>
+  </section>
+</div>
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+<section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">""A Day of Joy and Laughter"
+    </h5>
+    <p style="padding-top: 20px; color: whitesmoke;">The bridal shower photos I captured beautifully encapsulate the essence of a joyous celebration. Each image highlights the love and laughter shared among friends and family as they gathered to honor the bride-to-be. From heartfelt moments to playful interactions, these pictures reflect the excitement and warmth of this special occasion, creating lasting memories of a day filled with love and anticipation.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/bridal1.JPG" alt="A Day of Joy and Laughter 1">
+    </div>
+    <div class="card">
+      <img src="images/bridal5.JPG" alt="A Day of Joy and Laughter 2">
+    </div>
+    <div class="card">
+      <img src="images/bridal2.JPG" alt="A Day of Joy and Laughter 3">
+    </div>
+    <div class="card">
+      <img src="images/bridal3.JPG" alt="A Day of Joy and Laughter 4">
+    </div>
+    <div class="card">
+      <img src="images/bridal7.JPG" alt="A Day of Joy and Laughter 5">
+    </div>
+    <div class="card">
+      <img src="images/bridal8.JPG" alt="A Day of Joy and Laughter 6">
+    </div><div class="card">
+      <img src="images/bridal9.JPG" alt="A Day of Joy and Laughter 7">
+    </div>
+  </section>
+</div>
+
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">"Vibrant Spirit"</h5>
+    <p style="padding-top: 20px; color: whitesmoke;">"Vibrant Spirit" captures an attractive girl whose confidence and joy illuminate the scene. Taken indoors, this photograph reflects not only her lively essence but also my growth as a photographer. After capturing this moment, I felt a true sense of professionalism in my work, marking a significant step in my journey to refine my artistic vision and skills.x</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/vibrant1.jpg" alt="Vibrant Spirit 1">
+    </div>
+    <div class="card">
+      <img src="images/vibrant2.jpg" alt="Vibrant Spirit 2">
+    </div>
+    <div class="card">
+      <img src="images/vibrant3.jpg" alt="Vibrant Spirit 3">
+    </div>
+  </section>
+</div>
+
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">"Game On"</h5>
+    <p style="padding-top: 20px; color: whitesmoke;">"This solo portrait of a tennis player highlights their unique style and personality off the court. Captured in a moment of stillness, the image showcases their confident demeanor and passion for the sport. The photograph reflects not just the player's athleticism but also their individuality, making it a striking representation of who they are as both an athlete and a person.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/gameon1.jpg" alt="Game On 1">
+    </div>
+    <div class="card">
+      <img src="images/gameon2.jpg" alt="Game On 2">
+    </div>
+    <div class="card">
+      <img src="images/gameon3.jpg" alt="Game On 3">
+    </div>
+    <div class="card">
+      <img src="images/gameon4.jpg" alt="Game On 4">
+    </div>
+  </section>
+</div>
+
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">"Empress of the Day"</h5>
+    <p style="padding-top: 20px; color: whitesmoke;">This indoor portrait captures a stunning bride adorned in a beautiful Burmese traditional dress. The intricate details of her attire, from the delicate embroidery to the vibrant colors, reflect the rich cultural heritage of Myanmar. Her serene expression and graceful pose convey a sense of elegance and joy, making this image a celebration of love and tradition. The soft indoor lighting enhances her natural beauty, creating a warm and inviting atmosphere that highlights the significance of this special moment.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/empressoftheday1.JPG" alt="Empress of the Day 1">
+    </div>
+    <div class="card">
+      <img src="images/empressoftheday5.JPG" alt="Empress of the Day 5">
+    </div>
+    <div class="card">
+      <img src="images/empressoftheday2.JPG" alt="Empress of the Day 2">
+    </div>
+    <div class="card">
+      <img src="images/empressoftheday4.JPG" alt="Empress of the Day 4">
+    </div>
+  </section>
+</div>
+
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">""Hearts in Harmony"
+    </h5>
+    <p style="padding-top: 20px; color: whitesmoke;">This shooting showcases a couple adorned in Inwa's traditional dress, beautifully capturing their love story against the backdrop of Myanmar's rich cultural heritage. As a photographer, I aimed to highlight the intricate details of their attire while portraying the genuine emotions shared between them. The serene setting of Inwa adds depth to the narrative, making each image a testament to their commitment and the timeless beauty of their journey together. This collection reflects not only their unique bond but also the elegance of tradition, creating lasting memories of this special moment.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/heartsin1.jpg" alt="Hearts in Harmony 1">
+    </div>
+    <div class="card">
+      <img src="images/heartsin2.jpg" alt="Hearts in Harmony 5">
+    </div>
+    <div class="card">
+      <img src="images/heartsin3.jpg" alt="Hearts in Harmony 2">
+    </div>
+    <div class="card">
+      <img src="images/heartsin4.jpg" alt="Hearts in Harmony 4">
+    </div>
+  </section>
+</div>
+
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">"Whispers of Love"
+    </h5>
+    <p style="padding-top: 20px; color: whitesmoke;">As a photographer specializing in pre-wedding shoots, I had the privilege of capturing a couple’s love story against the backdrop of stunning European-inspired scenery. The intricate details of their elegant dresses perfectly complemented the romantic ambiance, creating a fairytale atmosphere. Each frame tells a tale of anticipation and joy, showcasing their unique connection and the beautiful journey they are about to embark on together. Through my lens, I aimed to encapsulate not just the beauty of the attire but also the deep emotions and excitement of this special time in their lives.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/whisper1.jpg" alt="Whispers of Love 1">
+    </div>
+    <div class="card">
+      <img src="images/whisper2.jpg" alt="Whispers of Love 2">
+    </div>
+    <div class="card">
+      <img src="images/whisper3.jpg" alt="Whispers of Love 3">
+    </div>
+  </section>
+</div>
+<div style="border: solid #00acc1; margin-top: 50px; margin-left: 20px; margin-right: 20px; border-radius: 30px; padding-top: 30px; background-color: #00acc1;">
+  <section class="gallery1-info">
+    <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">"Rocket Bunny"
+    </h5>
+    <p style="padding-top: 20px; color: whitesmoke;">This captivating shot features my friend’s wildly styled car, embodying the spirit of automotive passion and creativity. The vibrant colors and unique modifications reflect the personality of its owner, showcasing a blend of artistry and engineering. Captured at the perfect angle, this image highlights not just the car’s impressive features but also the thrill that comes with car culture. Each detail tells a story of adventure and excitement, making this photo a true celebration of car enthusiasts.</p>
+  </section>
+  <section class="gallery1">
+    <div class="card">
+      <img src="images/rocket1.jpg" alt="Rocket Bunny 1">
+    </div>
+    <div class="card">
+      <img src="images/rocket2.jpg" alt="Rocket Bunny 2">
+    </div>
+    <div class="card">
+      <img src="images/rocket3.jpg" alt="Rocket Bunny 3">
+    </div>
+    <div class="card">
+      <img src="images/rocket4.jpg" alt="Rocket Bunny 4">
+    </div>
+  </section>
+</div>
+
+<footer style="text-align: center; padding: 20px; background-color: #f8f9fa; padding-bottom: 100px; margin-top: 50px;">
+  <p>&copy; 2024 <a href="index.html">Ngwe La Win</a>. All Rights Reserved.</p>
+</footer>
+
+  <div id="lightbox" class="lightbox">
+    <img src="" alt="Enlarged Photo" id="lightbox-img">
+  </div>
+
+  <script>
+    // Select all gallery images and the lightbox elements
+    const galleryImages = document.querySelectorAll('.card img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    // Open lightbox when an image is clicked
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    // Close lightbox when clicking anywhere on it
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    // Close lightbox with ESC key
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        lightbox.style.display = 'none';
+      }
+    });
+</script>
+
+  <script src="java/bootstrap.bundle.min.js"></script>
+</body>
+</html>
